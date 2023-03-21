@@ -61,3 +61,73 @@ const e = [4, 2, 3];
 const f = [3, 3, 1];
 const resultadoDiferencia = diferenciaPuntaje(e, f);
 console.log(resultadoDiferencia)
+
+/////////////////////////////////////////////////////////////////////////
+//*04 calcular e imprimir la suma de las elementos de un array
+// ar = [1000000001,1000000002, 1000000003, 1000000004, 1000000005]; = 5000000015
+
+function sumaGrande(big) {
+    let suma = 0;
+    for (let i = 0; i < big.length; i++) {
+        suma += big[i]
+    }
+    return suma
+}
+const big = [1000000001, 1000000002, 1000000003, 1000000004, 1000000005]
+console.log(sumaGrande(big))
+
+//!Extras.
+//*1 Dado un número base y un número exponente (Math.pow), escribe una función que calcule el logaritmo de la base en el exponente.
+function exponente(bas, exp) {
+    return Math.pow(bas,exp)
+}
+const bas = 5;
+const exp = 2;
+console.log(exponente(bas, exp))
+
+//*2 Escribe una función que tome un arreglo de números y calcule el número elevado a la 2. Devuelve un arreglo con los resultados.
+function arreglosElevados(arreglos) {
+    let elevados = []
+    for (let i = 0; i < arreglos.length; i++) {
+        let ele = Math.pow(arreglos[i], 2)
+        elevados.push(ele)
+    }
+    return elevados
+}
+const arreglos = [1, 2, 3, 4, 5];
+const resultadoArregloElevado = (arreglosElevados(arreglos))
+console.log(resultadoArregloElevado)
+
+//*3  Escribe una función que tome un número y calcule el logaritmo natural (base e) de ese número.
+function logaritmoNatural(e) {
+     return Math.log(e)
+}
+console.log(logaritmoNatural(10))
+
+//*4 Escribe una función que tome dos números y calcule el logaritmo de uno en base del otro.
+
+function logaritmoNaturalDos(f, g) {
+    return Math.log(f) / Math.log(g)
+    
+}
+console.log(logaritmoNaturalDos(8, 2))
+console.log(logaritmoNaturalDos(12, 2))
+console.log(logaritmoNaturalDos(4, 2))
+console.log(logaritmoNaturalDos(5, 2))
+
+//2e3 = 8 || 2*2*2 = 8
+
+//*5 Escribe una función que tome dos arreglos de números y devuelva un nuevo arreglo con los logaritmos de los elementos del primer arreglo en base a los elementos correspondientes del segundo arreglo.
+
+function logaritmosArreglos(h, j) {
+    let logaritmos = [];
+    for (let i = 0; i < h.length; i++) {
+        let res = Math.log(h[i]) / Math.log(j[i]);
+        logaritmos.push(res);
+    }
+    return logaritmos
+}
+const h = [8, 12, 4, 5];
+const j = [2, 2, 2, 2];
+const resultadoLogaritmosArr = (logaritmosArreglos(h, j));
+console.log(resultadoLogaritmosArr)
